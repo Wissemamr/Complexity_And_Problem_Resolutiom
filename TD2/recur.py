@@ -2,7 +2,7 @@
 # On sait que (N+ 1)^2 = N^2 + 2N + 1
 # Pour n-1
 # N^2 = (N-1)^2 + 2N - 1
-
+import time
 
 def recursive_square(n: int) -> int:
     """Calculates the square of n in a recursive way"""
@@ -71,10 +71,16 @@ if __name__ == "__main__":
     fact = recursive_factorial(a)
     print(f"The factorial of {a} is : {fact} ")
     # -----------------------------------------------------------
-    t = 10
+    t1 = time.time()
+    t = 41
     fib = recursive_fibonacci(t)
     print(f"Recursively, the fibonacci serie of {t} is:  F[{t-1}] : {fib}")
+    t2 = time.time()
     # -----------------------------------------------------------
-    p = 10
+    p = 41
     fib_iter = iterative_fibonacci(p)
     print(f"Iteratively, the fibonacci serie of {p} is:  F[{p-1}] : {fib_iter}")
+    t3 = time.time()
+    print(f'The recursive computing of F[{t-1}] took : {t2-t1} seconds ')
+    print(f'The  iterative computing of F[{p-1}] took : {t3-t2} seconds ')
+    print((t2-t1)/(t3-t2))

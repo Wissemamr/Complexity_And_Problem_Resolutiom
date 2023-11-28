@@ -4,6 +4,7 @@
 # N^2 = (N-1)^2 + 2N - 1
 import time
 
+
 def recursive_square(n: int) -> int:
     """Calculates the square of n in a recursive way"""
     if n == 0 or n == 1:
@@ -47,12 +48,10 @@ def iterative_fibonacci(p: int) -> int:
     else:  # i >=2
         curr_el = 0
         prev_el = 1
-        for i in range(2, p+2):
+        for i in range(2, p + 2):
             next_el = curr_el + prev_el
-            prev_el , curr_el = curr_el , next_el
+            prev_el, curr_el = curr_el, next_el
         return curr_el
-            
-
 
 
 # ==============================================================================
@@ -81,6 +80,6 @@ if __name__ == "__main__":
     fib_iter = iterative_fibonacci(p)
     print(f"Iteratively, the fibonacci serie of {p} is:  F[{p-1}] : {fib_iter}")
     t3 = time.time()
-    print(f'The recursive computing of F[{t-1}] took : {t2-t1} seconds ')
-    print(f'The  iterative computing of F[{p-1}] took : {t3-t2} seconds ')
-    print((t2-t1)/(t3-t2))
+    print(f"The recursive computing of F[{t-1}] took : {t2-t1} seconds ")
+    print(f"The  iterative computing of F[{p-1}] took : {t3-t2} seconds ")
+    print((t2 - t1) / (t3 - t2))

@@ -1,8 +1,8 @@
-# Calculer le carre d'un nomdre en utilisant la recursivite
+# Calculer le carre d'un nombre en utilisant la recursivite
 # On sait que (N+ 1)^2 = N^2 + 2N + 1
 # Pour n-1
 # N^2 = (N-1)^2 + 2N - 1
-import time
+import time 
 
 
 def recursive_square(n: int) -> int:
@@ -31,7 +31,8 @@ def recursive_factorial(a: int) -> int:
     else:
         return a * recursive_factorial(a - 1)
 
-    # NOTE : Le type de recursite est : simple
+
+# NOTE : Le type de recursite est : simple
 
 
 def recursive_fibonacci(t: int) -> int:

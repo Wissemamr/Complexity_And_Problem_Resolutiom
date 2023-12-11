@@ -8,11 +8,12 @@ def get_solution_set(inp_list: list) -> set:
     pass
 
 
-def verify_adjacent_elem(inp_list : list)-> bool :
+def verify_adjacent_elem(inp_list: list) -> bool:
     for i in inp_list:
         pass
 
-def get_elem_sum(inp_list : list)-> int|float:
+
+def get_elem_sum(inp_list: list) -> int | float:
     return sum(inp_list)
 
 
@@ -21,5 +22,4 @@ if __name__ == "__main__":
 
 
 best_solution = get_solution_set(inp_list=inp_list)
-print(f'The solution set is : {best_solution}')
-
+print(f"The solution set is : {best_solution}")
